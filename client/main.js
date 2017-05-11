@@ -10,7 +10,7 @@ Meteor.startup(() => {
   Tracker.autorun(() => {
     let players = Players.find({},{sort:{ score:-1}}).fetch();
     let positionedPlayer = calculatePlayersPositions(players);
-    let title = 'Score Keep';
+    let title = 'Score Keep by Leo';
     ReactDOM.render(<App title={title} players={positionedPlayer}/>, document.getElementById('app'));
   });
 });
